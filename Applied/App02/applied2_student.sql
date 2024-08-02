@@ -2,9 +2,9 @@
 Databases Applied 2
 applied2_student.sql
 
-student id:
-student name:
-last modified date:
+student id: 35278307
+student name: Fouz Ul Mubeen
+last modified date: 02 Aug 2024
 
 */
 
