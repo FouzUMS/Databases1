@@ -6,8 +6,6 @@ student id: 35278307
 student name: Fouz Ul Mubeen
 modified date: 02 Aug 2024 
 last modified date: 07 Aug 2024 
-
-
 */
 
 DROP TABLE student CASCADE CONSTRAINTS;
