@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="57AF3EB5-363D-3867-0FCE-E107DEF2AF4D" name="PRODUCT">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<generatorID>B9E8C962-27B3-9BF9-CD98-C9B14FAEE783</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="prod_no" id="4DF35C7A-7F9D-8786-4F89-6B4C563F9F08">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[product number]]></commentInRDBMS>
+<generatorID>22D4A695-E742-9973-9070-36782930B585</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prod_desc" id="A981BDF0-1F87-57AE-4A2F-E3FBE7050508">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[product description]]></commentInRDBMS>
+<generatorID>A8A35FE8-F8DF-E2C1-4DD0-7D8183E76AE0</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prod_unitprice" id="A2656019-E42E-43C0-A947-1C52CF3BDAE1">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[unit price]]></commentInRDBMS>
+<generatorID>99FCB0A4-B942-88EA-0129-25FA72D99E15</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prod_category" id="0084500A-27EF-002F-595D-08507F323B06">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[product category]]></commentInRDBMS>
+<generatorID>E58B349F-ACA4-1EB0-9E57-1AF1E93142E2</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6FF5B03F-79CC-55B4-77D5-E88B7B5A7ABD" name="PRODUCT_PK">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<generatorID>FD70CF01-4DBF-9BEA-2B27-E75BB9BC7427</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4DF35C7A-7F9D-8786-4F89-6B4C563F9F08"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -3,6 +3,9 @@
 <createdBy>fouz0</createdBy>
 <createdTime>2024-08-30 04:41:47 UTC</createdTime>
 <ownerDesignName>Applied 6</ownerDesignName>
+<engineerTo>
+<item key="EB560AE4-B2F4-A0FC-877B-287B0CAC2348" value="true"/>
+</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -17,6 +20,9 @@
 <createdTime>2024-08-30 04:42:19 UTC</createdTime>
 <commentInRDBMS><![CDATA[Customer number]]></commentInRDBMS>
 <ownerDesignName>Applied 6</ownerDesignName>
+<engineerTo>
+<item key="EB560AE4-B2F4-A0FC-877B-287B0CAC2348" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -28,6 +34,9 @@
 <createdTime>2024-08-30 04:47:22 UTC</createdTime>
 <commentInRDBMS><![CDATA[customer address]]></commentInRDBMS>
 <ownerDesignName>Applied 6</ownerDesignName>
+<engineerTo>
+<item key="EB560AE4-B2F4-A0FC-877B-287B0CAC2348" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -39,6 +48,9 @@
 <createdTime>2024-08-30 04:48:05 UTC</createdTime>
 <commentInRDBMS><![CDATA[customer address]]></commentInRDBMS>
 <ownerDesignName>Applied 6</ownerDesignName>
+<engineerTo>
+<item key="EB560AE4-B2F4-A0FC-877B-287B0CAC2348" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -50,6 +62,9 @@
 <createdTime>2024-08-30 04:48:22 UTC</createdTime>
 <commentInRDBMS><![CDATA[customer phone]]></commentInRDBMS>
 <ownerDesignName>Applied 6</ownerDesignName>
+<engineerTo>
+<item key="EB560AE4-B2F4-A0FC-877B-287B0CAC2348" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -57,12 +72,35 @@
 <dataTypeSize>10</dataTypeSize>
 <ownDataTypeParameters>10,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="cust_level" id="3BB3EB55-F728-74AF-6A81-1ED10E6B07F6">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:18:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[customer level, G, S, B]]></commentInRDBMS>
+<ownerDesignName>Applied 6</ownerDesignName>
+<engineerTo>
+<item key="EB560AE4-B2F4-A0FC-877B-287B0CAC2348" value="true"/>
+</engineerTo>
+<constraintName>chk_custlevel</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="B" description="Bronze"/>
+<valueDef value="G" description="Gold"/>
+<valueDef value="S" description="Silver"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="29093822-7F97-0325-EFB4-FF261899E298" name="CUSTOMER PK">
 <createdBy>fouz0</createdBy>
 <createdTime>2024-08-30 04:42:42 UTC</createdTime>
 <ownerDesignName>Applied 6</ownerDesignName>
+<engineerTo>
+<item key="EB560AE4-B2F4-A0FC-877B-287B0CAC2348" value="true"/>
+</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>D98309AE-F009-3F95-04A0-A4AB517E293F</attributeRef>

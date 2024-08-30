@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F32F473C-B288-F9A6-507C-4BA987973F46" name="CUSTOMER">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<generatorID>4A5E0F5B-779B-6CA1-D7D2-AD4CFDFCD4FB</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cust_no" id="54634096-5C2E-5644-6071-491B9CCF7624">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[Customer number]]></commentInRDBMS>
+<generatorID>D98309AE-F009-3F95-04A0-A4AB517E293F</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_name" id="EC4EDB32-773C-85E9-71B0-C47DA4F1A0E2">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[customer address]]></commentInRDBMS>
+<generatorID>9034EC2D-D329-2BA7-72C8-73AD2156287D</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_add" id="A22170F5-5DE1-38F1-5E75-31CDFBD01F61">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[customer address]]></commentInRDBMS>
+<generatorID>82497555-D44E-1FB3-B00B-F254DE4D4B33</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_phone" id="910D6771-55FC-315C-372D-96F7D57E173F">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[customer phone]]></commentInRDBMS>
+<generatorID>416C440E-1D56-0C27-017C-3467AED9A9F1</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_level" id="FC973ED6-B94D-4B5D-5FC0-FF8BAEE47BA7">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[customer level, G, S, B]]></commentInRDBMS>
+<generatorID>3BB3EB55-F728-74AF-6A81-1ED10E6B07F6</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<constraintName>chk_custlevel</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="B" description="Bronze"/>
+<valueDef value="G" description="Gold"/>
+<valueDef value="S" description="Silver"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8C0CBB83-92BB-89B7-53C2-AEA9C33B1BDE" name="CUSTOMER_PK">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<generatorID>29093822-7F97-0325-EFB4-FF261899E298</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="54634096-5C2E-5644-6071-491B9CCF7624"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

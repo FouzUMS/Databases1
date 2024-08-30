@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="704E2610-7C45-486C-CE62-7180407B1ED8" name="ORDERLINE">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<generatorID>C2E2B96E-1677-CE38-98D6-EE940C4B4211</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ol_qtyordered" id="67BF9A36-3C61-B0C5-5B38-2D6AF21F8B0F">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<generatorID>103D2A52-97CA-746B-1EC8-25C12DBE8C2F</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ol_priceline" id="42E51119-A564-7BEE-4133-4C1E68D6E74E">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[price line]]></commentInRDBMS>
+<generatorID>EB3FAC7F-0145-4E79-7811-C1DEC64098BF</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prod_no" id="4488E654-BAC7-5AC6-96EC-C26ACDB5B3B4">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[product number]]></commentInRDBMS>
+<generatorID>6D840560-13EB-8A0F-9E75-7A559D9D769A</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="427C1BF6-CC82-E27C-8BED-C54565059E64" referredColumn="4DF35C7A-7F9D-8786-4F89-6B4C563F9F08"/>
+</associations>
+</Column>
+<Column name="order_no" id="BAA4718E-23B9-FFC9-F374-FDA1BEC77F31">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<generatorID>4FA3C493-23F5-21F6-70B4-95F9D104B18C</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DCD919C8-8128-501E-917C-0491C536FBC5" referredColumn="2AA098B6-5F6C-DF58-BE82-68668D630A05"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="57ACD25C-AEDA-93D0-8779-246AEDEF80CF" name="ORDERLINE_PK">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<generatorID>13A323ED-7586-7274-C372-0B9D081E6EFE</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="946CAEE2-C90F-EF83-7E24-F0797BABA7E9" name="Relation_4">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<generatorID>4E673778-7149-5E24-0D7C-ABAE625EA31D</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4488E654-BAC7-5AC6-96EC-C26ACDB5B3B4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1867DA19-452D-9906-FDD3-04AE8F4A9A6B" name="Relation_5">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:24:18 UTC</createdTime>
+<generatorID>1610C40A-239C-C819-459E-3C108198EFC1</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BAA4718E-23B9-FFC9-F374-FDA1BEC77F31"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
