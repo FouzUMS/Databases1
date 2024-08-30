@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C2E2B96E-1677-CE38-98D6-EE940C4B4211" name="ORDERLINE">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 04:57:57 UTC</createdTime>
+<ownerDesignName>Applied 6</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ol_qtyordered" id="103D2A52-97CA-746B-1EC8-25C12DBE8C2F">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:02:26 UTC</createdTime>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ol_priceline" id="EB3FAC7F-0145-4E79-7811-C1DEC64098BF">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:02:54 UTC</createdTime>
+<commentInRDBMS><![CDATA[price line]]></commentInRDBMS>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prod_no" id="6D840560-13EB-8A0F-9E75-7A559D9D769A">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:13:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[product number]]></commentInRDBMS>
+<generatorID>4E673778-7149-5E24-0D7C-ABAE625EA31D</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<referedAttribute>22D4A695-E742-9973-9070-36782930B585</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="order_no" id="4FA3C493-23F5-21F6-70B4-95F9D104B18C">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:14:16 UTC</createdTime>
+<generatorID>1610C40A-239C-C819-459E-3C108198EFC1</generatorID>
+<ownerDesignName>Applied 6</ownerDesignName>
+<referedAttribute>40E089B0-76F0-4423-6454-1FD017817674</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="13A323ED-7586-7274-C372-0B9D081E6EFE" name="ORDERLINE PK">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:01:09 UTC</createdTime>
+<ownerDesignName>Applied 6</ownerDesignName>
+<pk>true</pk>
+</identifier>
+</identifiers>
+</Entity>

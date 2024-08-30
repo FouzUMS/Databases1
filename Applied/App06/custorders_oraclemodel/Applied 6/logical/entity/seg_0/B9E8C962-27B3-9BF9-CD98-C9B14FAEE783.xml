@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B9E8C962-27B3-9BF9-CD98-C9B14FAEE783" name="PRODUCT">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:03:32 UTC</createdTime>
+<ownerDesignName>Applied 6</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="prod_no" id="22D4A695-E742-9973-9070-36782930B585">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:03:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[product number]]></commentInRDBMS>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prod_desc" id="A8A35FE8-F8DF-E2C1-4DD0-7D8183E76AE0">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:04:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[product description]]></commentInRDBMS>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prod_unitprice" id="99FCB0A4-B942-88EA-0129-25FA72D99E15">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:05:02 UTC</createdTime>
+<commentInRDBMS><![CDATA[unit price]]></commentInRDBMS>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prod_category" id="E58B349F-ACA4-1EB0-9E57-1AF1E93142E2">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:10:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[product category]]></commentInRDBMS>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FD70CF01-4DBF-9BEA-2B27-E75BB9BC7427" name="PRODUCT PK">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 05:04:08 UTC</createdTime>
+<ownerDesignName>Applied 6</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>22D4A695-E742-9973-9070-36782930B585</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
