@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D69BE045-C003-EEF8-93C5-58EB179269F7" name="ORDERS">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 04:44:08 UTC</createdTime>
+<ownerDesignName>Applied 6</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="order_no" id="40E089B0-76F0-4423-6454-1FD017817674">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 04:44:43 UTC</createdTime>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="order_date" id="72C2AE5B-781F-8F9C-E5F5-95B7740AC011">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 04:45:21 UTC</createdTime>
+<ownerDesignName>Applied 6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3CEACF0A-025C-3E84-C0EF-12170EA9E437" name="ORDERS PK">
+<createdBy>fouz0</createdBy>
+<createdTime>2024-08-30 04:45:01 UTC</createdTime>
+<ownerDesignName>Applied 6</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>40E089B0-76F0-4423-6454-1FD017817674</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
