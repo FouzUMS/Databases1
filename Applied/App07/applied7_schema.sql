@@ -44,6 +44,8 @@ COMMENT ON COLUMN student.stu_dob IS
     'Student date of birth';
 
 /* Add STUDENT constraints here */
+ALTER TABLE student AND CONSTRAINT ck_stu_nbr CHECK [stu_nbr > 10000000];
+
 
 /* Add UNIT data types here */
 CREATE TABLE unit (
