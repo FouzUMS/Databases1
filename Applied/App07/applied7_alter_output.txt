@@ -33,16 +33,18 @@ COMMENT ON COLUMN course.course_code IS
 ERROR at line 20:
 ORA-00922: missing or invalid option
 https://docs.oracle.com/error-help/db/ora-00922/
-SQL> CREATE TABLE unit_course (
-  2      unit_code char(7) NOt NULL,
-  3      course_code CHAR(5) not null
-  4  );
+SQL> ALTER TABLE course ADD CONSTRAINT course_pk PRIMARY KEY (course_code)
+  2
+  3  CREATE TABLE unit_course (
+  4      unit_code char(7) NOt NULL,
+  5      course_code CHAR(5) not null
+  6  );
 
 CREATE TABLE unit_course (
-             *
-ERROR at line 24:
-ORA-00955: name is already used by an existing object
-https://docs.oracle.com/error-help/db/ora-00955/
+ *
+ERROR at line 25:
+ORA-01735: invalid ALTER TABLE option
+https://docs.oracle.com/error-help/db/ora-01735/
 SQL> COMMENT ON COLUMN unit_course.course_code IS
   2      'course code as primary foreign key'
   3
@@ -53,5 +55,17 @@ SQL> COMMENT ON COLUMN unit_course.unit_code IS
   3
 Comment created.
 
-SQL> SPOOL OFF
+SQL> ALTER TABLE unit_course ADD CONSTRAINT unit_course_pk PRIMARY KEY (unit_code, course_code)
+  2  ALTER TABLE unit_course ADD CONSTRAINT unit_course_uc_fk1 FOREIGN KEY (unit_code) REFERENCES unit (unit_code)
+  3  ALTER TABLE unit_course ADD CONSTRAINT unit_course_uc_fk2 FOREIGN KEY (course_code)) REFERENCES course (course_code)
+  4
+  5  SPOOL OFF
+  6  SET ECHO OFF
 
+ALTER TABLE unit_course ADD CONSTRAINT unit_course_uc_fk1 FOREIGN KEY
+(unit_code) REFERENCES unit (unit_code)
+*
+
+ERROR at line 37:
+ORA-01735: invalid ALTER TABLE option
+https://docs.oracle.com/error-help/db/ora-01735/
