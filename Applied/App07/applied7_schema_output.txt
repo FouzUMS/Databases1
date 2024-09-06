@@ -7,11 +7,8 @@ TABLE dropped.
 
 SQL> DROP TABLE enrolment CASCADE CONSTRAINTS PURGE;
 
-DROP TABLE enrolment CASCADE CONSTRAINTS PURGE
-           *
-ERROR at line 19:
-ORA-00942: table or view does not exist
-https://docs.oracle.com/error-help/db/ora-00942/
+TABLE dropped.
+
 SQL> DROP TABLE unit CASCADE CONSTRAINTS PURGE;
 
 TABLE dropped.
@@ -82,97 +79,56 @@ TABLE altered.
 
 SQL> /* Add ENROLMENT attributes and data types here */
 SQL> CREATE TABLE enrolment (
-  2      stu_nbr     NUMBER(8) NOT NULL,
-  3      unit_code   CHAR(7) NOT NULL,
-  4      enrol_year  NUMBER(4) NOT NULL,
-  5      ,
-  6      ,
-  7
+  2      stu_nbr         NUMBER(8) NOT NULL,
+  3      unit_code       CHAR(7) NOT NULL,
+  4      enrol_year      NUMBER(4) NOT NULL,
+  5      enrol_semester  CHAR(1) NOT NULL,
+  6      enrol_mark      NUMBER(3),
+  7      enrol_grade     CHAR(2)
   8  );
 
-    ,
-     *
-ERROR at line 75:
-ORA-00904: : invalid identifier
-https://docs.oracle.com/error-help/db/ora-00904/
+TABLE created.
+
 SQL> COMMENT ON COLUMN enrolment.stu_nbr IS
   2      'Student number';
-COMMENT ON COLUMN enrolment.stu_nbr IS
-                  *
-ERROR at line 80:
-ORA-00942: table or view does not exist
-https://docs.oracle.com/error-help/db/ora-00942/
+Comment created.
+
 SQL> COMMENT ON COLUMN enrolment.unit_code IS
   2      'Unit code';
-COMMENT ON COLUMN enrolment.unit_code IS
-                  *
-ERROR at line 83:
-ORA-00942: table or view does not exist
-https://docs.oracle.com/error-help/db/ora-00942/
+Comment created.
+
 SQL> COMMENT ON COLUMN enrolment.enrol_year IS
   2      'Enrolment year';
-COMMENT ON COLUMN enrolment.enrol_year IS
-                  *
-ERROR at line 86:
-ORA-00942: table or view does not exist
-https://docs.oracle.com/error-help/db/ora-00942/
+Comment created.
+
 SQL> COMMENT ON COLUMN enrolment.enrol_semester IS
   2      'Enrolment semester';
-COMMENT ON COLUMN enrolment.enrol_semester IS
-                  *
-ERROR at line 89:
-ORA-00942: table or view does not exist
-https://docs.oracle.com/error-help/db/ora-00942/
+Comment created.
+
 SQL> COMMENT ON COLUMN enrolment.enrol_mark IS
   2      'Enrolment mark (real)';
-COMMENT ON COLUMN enrolment.enrol_mark IS
-                  *
-ERROR at line 92:
-ORA-00942: table or view does not exist
-https://docs.oracle.com/error-help/db/ora-00942/
+Comment created.
+
 SQL> COMMENT ON COLUMN enrolment.enrol_grade IS
   2      'Enrolment grade (letter)';
-COMMENT ON COLUMN enrolment.enrol_grade IS
-                  *
-ERROR at line 95:
-ORA-00942: table or view does not exist
-https://docs.oracle.com/error-help/db/ora-00942/
+Comment created.
+
 SQL> /* Add ENROLMENT constraints here */
 SQL> ALTER TABLE enrolment ADD CONSTRAINT enrolment_pk PRIMARY KEY (stu_nbr, unit_code);
 
-ALTER TABLE enrolment ADD CONSTRAINT enrolment_pk PRIMARY KEY (stu_nbr,
-unit_code)
-*
+TABLE altered.
 
-ERROR at line 99:
-ORA-00942: table or view does not exist
-https://docs.oracle.com/error-help/db/ora-00942/
 SQL> ALTER TABLE enrolment ADD CONSTRAINT student_enrolment_fk FOREIGN KEY (stu_nbr) REFERENCES student (stu_nbr);
 
-ALTER TABLE enrolment ADD CONSTRAINT student_enrolment_fk FOREIGN KEY (stu_nbr)
-REFERENCES student (stu_nbr)
-*
+TABLE altered.
 
-ERROR at line 101:
-ORA-00942: table or view does not exist
-https://docs.oracle.com/error-help/db/ora-00942/
 SQL> ALTER TABLE enrolment ADD CONSTRAINT unit_enrolment_fk FOREIGN KEY (unit_code) REFERENCES unit (unit_code);
 
-ALTER TABLE enrolment ADD CONSTRAINT unit_enrolment_fk FOREIGN KEY (unit_code)
-REFERENCES unit (unit_code)
-*
+TABLE altered.
 
-ERROR at line 103:
-ORA-00942: table or view does not exist
-https://docs.oracle.com/error-help/db/ora-00942/
 SQL> ALTER TABLE enrolment ADD CONSTRAINT ck_enrol_semester CHECK (enrol_semester IN ('1','2','3'));
 
-ALTER TABLE enrolment ADD CONSTRAINT ck_enrol_semester CHECK (enrol_semester IN
-('1','2','3'))
-*
+TABLE altered.
 
-ERROR at line 105:
-ORA-00942: table or view does not exist
-https://docs.oracle.com/error-help/db/ora-00942/
 SQL> SPOOL OFF
 
