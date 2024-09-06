@@ -2,9 +2,9 @@
 Databases Applied 7
 applied7_schema.sql
 
-student id: 
-student name:
-last modified date:
+student id: 35278307
+student name: Fouz Ul Mubeen
+last modified date: 6/9/2024
 
 */
 
@@ -14,7 +14,10 @@ last modified date:
 --
 -- Place DROP commands at head of schema file
 --
-
+DROP TABLE student CASCADE CONSTRAINTS PURGE;
+DROP TABLE enrolment CASCADE CONSTRAINTS PURGE;
+DROP TABLE unit CASCADE CONSTRAINTS PURGE;
+-- CASCADE CONSTRAINTS PURGE <-- use only when we know we can fully delete the DB
 
 
 -- Create Tables
