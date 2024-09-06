@@ -44,16 +44,15 @@ COMMENT ON COLUMN student.stu_dob IS
     'Student date of birth';
 
 /* Add STUDENT constraints here */
-/* primary key constraint ->*/
-ALTER TABLE student AND CONSTRAINT student_pk PRIMARY KEY (stu_nbr);
+ALTER TABLE student ADD CONSTRAINT student_pk PRIMARY KEY (stu_nbr); /*<-- primary key constraint*/
 
-ALTER TABLE student AND CONSTRAINT ck_stu_nbr CHECK (stu_nbr > 10000000);
+ALTER TABLE student ADD CONSTRAINT ck_stu_nbr CHECK (stu_nbr > 10000000);
 
 
 /* Add UNIT data types here */
 CREATE TABLE unit (
-    unit_code   ,
-    unit_name   
+    unit_code       CHAR(7) NOT NULL,
+    unit_name       VARCHAR2(50) NOT NULL
 );
 
 COMMENT ON COLUMN unit.unit_code IS
@@ -63,6 +62,9 @@ COMMENT ON COLUMN unit.unit_name IS
     'Unit name';
 
 /* Add UNIT constraints here */
+ALTER TABLE unit ADD CONSTRAINT unit_pk PRIMARY KEY (unit_code);
+
+ALTER TABLE unit ADD CONSTRAINT uq_unit_name UNIQUE (unit_name);
 
 /* Add ENROLMENT attributes and data types here */
 CREATE TABLE enrolment (
