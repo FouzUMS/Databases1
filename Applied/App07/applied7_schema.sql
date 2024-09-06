@@ -10,7 +10,8 @@ last modified date: 6/9/2024
 
 -- DDL for Student-Unit-Enrolment model (using ALTER TABLE)
 --
-
+set ECHO ON
+SPOOL applied7_schema_output.txt
 --
 -- Place DROP commands at head of schema file
 --
@@ -102,3 +103,6 @@ ALTER TABLE enrolment ADD CONSTRAINT student_enrolment_fk FOREIGN KEY (stu_nbr) 
 ALTER TABLE enrolment ADD CONSTRAINT unit_enrolment_fk FOREIGN KEY (unit_code) REFERENCES unit (unit_code);
 
 ALTER TABLE enrolment ADD CONSTRAINT ck_enrol_semester CHECK (enrol_semester IN ('1','2','3'));
+
+SPOOL OFF
+SET ECHO OFF
