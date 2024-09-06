@@ -68,9 +68,9 @@ ALTER TABLE unit ADD CONSTRAINT uq_unit_name UNIQUE (unit_name);
 
 /* Add ENROLMENT attributes and data types here */
 CREATE TABLE enrolment (
-    ,
-    ,
-    ,
+    stu_nbr     NUMBER(8) NOT NULL,
+    unit_code   CHAR(7) NOT NULL,
+    enrol_year  NUMBER(4) NOT NULL,
     ,
     ,
     
@@ -95,3 +95,10 @@ COMMENT ON COLUMN enrolment.enrol_grade IS
     'Enrolment grade (letter)';
 
 /* Add ENROLMENT constraints here */
+ALTER TABLE enrolment ADD CONSTRAINT enrolment_pk PRIMARY KEY (stu_nbr, unit_code);
+
+ALTER TABLE enrolment ADD CONSTRAINT student_enrolment_fk FOREIGN KEY (stu_nbr) REFERENCES student (stu_nbr);
+
+ALTER TABLE enrolment ADD CONSTRAINT unit_enrolment_fk FOREIGN KEY (unit_code) REFERENCES unit (unit_code);
+
+ALTER TABLE enrolment ADD CONSTRAINT ck_enrol_semester CHECK (enrol_semester IN ('1','2','3'));
