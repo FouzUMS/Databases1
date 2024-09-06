@@ -69,12 +69,12 @@ ALTER TABLE unit ADD CONSTRAINT uq_unit_name UNIQUE (unit_name);
 
 /* Add ENROLMENT attributes and data types here */
 CREATE TABLE enrolment (
-    stu_nbr     NUMBER(8) NOT NULL,
-    unit_code   CHAR(7) NOT NULL,
-    enrol_year  NUMBER(4) NOT NULL,
-    ,
-    ,
-    
+    stu_nbr         NUMBER(8) NOT NULL,
+    unit_code       CHAR(7) NOT NULL,
+    enrol_year      NUMBER(4) NOT NULL,
+    enrol_semester  CHAR(1) NOT NULL,
+    enrol_mark      NUMBER(3),
+    enrol_grade     CHAR(2)    
 );
 
 COMMENT ON COLUMN enrolment.stu_nbr IS
