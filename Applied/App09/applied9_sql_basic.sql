@@ -83,8 +83,8 @@ FROM
     UNI.ENROLMENT
 WHERE
     TO_CHAR(ENROLMARK) < '50'
-    and ofsemester = 2
-    and to_char(ofyear, 'yyyy') = '2021'
+    AND OFSEMESTER = 2
+    AND TO_CHAR(OFYEAR, 'yyyy') = '2021'
 ORDER BY
     STUID,
     UNITCODE;
@@ -96,13 +96,38 @@ ORDER BY
 /* Part B - Retrieving data from multiple tables */
 
 -- B1
+--List all the unit codes, semesters and name of chief examiners (ie.
+--the staff who is responsible for the unit) for all the units that
+--are offered in 2021. Order the output by semester then by unit code.
 
+SELECT
+    UNITCODE,
+    OFSEMESTER,
+    STAFFLNAME
+FROM
+    UNI.STAFF    S
+    JOIN UNI.OFFERING O
+    ON S.STAFFID = O.STAFFID;
 
 -- B2
 
 
 -- B3
-
+--ist the student id, student name (firstname and surname) as one attribute and the unit name of all enrolments for semester 1 of 2021. Order the output by unit name, within a given unit name, order by student id.
+SELECT
+    S.STUID
+    || ' '
+    || S.STUFNAME
+    || ' '
+    || S.STULNAME AS STUDENT,
+    U.UNITNAME
+FROM
+    UNI.ENROLMENT E JOIN UNI.STUDENT S ON E.STUID = S.STUID             
+    JOIN UNI.UNIT U
+    ON U.UNITCODE = E.UNITCODE
+WHERE
+    OFSEMESTER = 1
+    AND TO_CHAR(OFYEAR, 'yyyy') = '2021';
 
 -- B4
 
@@ -114,7 +139,24 @@ ORDER BY
 
 
 -- B7
+--List the unit code, unit name and the unit code and unit name of the prerequisite units for all units in the database which have prerequisites. Order the output by unit code and prerequisite unit code.
 
+SELECT
+    U.UNITCODE,
+    U.UNITNAME,
+    P.UNITCODE,
+    P.PREREQUNITCODE
+FROM
+    UNI.UNIT   U
+    JOIN UNI.PREREQ P
+    ON U.UNITCODE = P.UNITCODE
+WHERE
+    P.PREREQUNITCODE IS NOT NULL
+ORDER BY
+    U.UNITCODE,
+    P.PREREQUNITCODE;
+    
+-- Tables: unit, prereq
 
 -- B8
 
