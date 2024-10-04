@@ -80,22 +80,62 @@ GROUP BY
     UNITCODE
 ORDER BY
     UNITCODE;
+
 --8
+--Find the total number of students whose marks are being withheld (grade is 
+--recorded as WH) for each unit offered in semester 2 2020. In the listing
+--include the unit code for which the count is applicable. Sort the list by 
+--descending order of the total number of students whose marks are being 
+--withheld, then by the unit code.
 
-
-
+SELECT
+    UNITCODE,
+    to_char(COUNT(STUID)) AS NUM_STUDS
+FROM
+    UNI.ENROLMENT
+WHERE
+        ENROLGRADE = 'WH'
+    AND OFSEMESTER = 2
+    AND TO_CHAR(OFYEAR, 'yyyy') = '2020'
+GROUP BY
+    UNITCODE
+ORDER BY
+    NUM_STUDS DESC;
 --9
 
 
 
 --10
+--Display the unit code and unit name of units which had at least 2 students 
+--who were granted a deferred exam (grade is recorded as DEF) in semester 2 
+--2021. Order the list by unit code.
 
-
-
+SELECT
+    count(stuid)
+FROM
+    UNI.ENROLMENT
+WHERE
+        upper(ENROLGRADE) = 'DEF'
+    AND OFSEMESTER = 2
+    AND TO_CHAR(OFYEAR, 'yyyy') = 2021
+GROUP BY
+     UNITCODE
+HAVING
+    COUNT(STUID) > 1;
 
 --11
+--Find the oldest student/s in FIT9132. Display the student’s id, full name 
+--and the date of birth. Sort the list by student id.
 
-
+SELECT
+    stuid, stufname || ' ' || stulname as full_name, to_char(studob, 'dd/Mon/yyyy') as DOB
+FROM
+    UNI.ENROLMENT NATURAL JOIN UNI.STUDENT
+WHERE studob = (select min(studob)
+from UNI.ENROLMENT NATURAL JOIN UNI.STUDENT where 
+    UPPER(UNITCODE) = 'FIT9132') AND
+    UPPER(UNITCODE) = 'FIT9132'
+    ORDER BY stuid;
 
 --12
 
