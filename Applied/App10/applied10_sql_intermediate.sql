@@ -111,7 +111,8 @@ ORDER BY
 --2021. Order the list by unit code.
 
 SELECT
-    count(stuid)
+    -- count(stuid), 
+    UNITCODE
 FROM
     UNI.ENROLMENT
 WHERE
