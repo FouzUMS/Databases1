@@ -50,6 +50,34 @@ ALTER TABLE official ADD CONSTRAINT official_pk PRIMARY KEY (off_id);
 
 -- VEHICLE
 
+CREATE TABLE vehicle (
+    veh_vin             CHAR(17) NOT NULL,
+    veh_rego            CHAR(7) NOT NULL,
+    veh_year            DATE NOT NULL,
+    veh_curr_odo        NUMBER(6) NOT NULL,
+    veh_nopassengers    NUMBER(2) NOT NULL,
+    vm_model_id         NUMBER(4) NOT NULL
+);
+
+COMMENT ON COLUMN vehicle.veh_vin IS
+    'Identifier for vehicle';
+
+COMMENT ON COLUMN vehicle.veh_rego IS
+    'Registration plate of vehicle';
+
+COMMENT ON COLUMN vehicle.veh_year IS
+    'Year of manufacture of vehicle';
+
+COMMENT ON COLUMN vehicle.veh_curr_odo IS
+    'Current odometer reading of vehicle';
+
+COMMENT ON COLUMN vehicle.veh_nopassengers IS
+    'Number of passengers vehicle can seat';
+
+COMMENT ON COLUMN official.vm_model_id IS
+    'Identifier for vehicle_model';
+
+ALTER TABLE vehicle ADD CONSTRAINT vehicle_pk PRIMARY KEY (veh_vin);
 
 -- TRIP
 
