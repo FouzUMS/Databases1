@@ -1,8 +1,8 @@
 --*****PLEASE ENTER YOUR DETAILS BELOW*****
 --T1-pat-schema.sql
 
---Student ID:
---Student Name:
+--Student ID: 300172966
+--Student Name: Fouz Ul Mubeen
 
 
 /* Comments for your marker:
