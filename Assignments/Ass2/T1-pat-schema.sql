@@ -74,7 +74,7 @@ COMMENT ON COLUMN vehicle.veh_curr_odo IS
 COMMENT ON COLUMN vehicle.veh_nopassengers IS
     'Number of passengers vehicle can seat';
 
-COMMENT ON COLUMN official.vm_model_id IS
+COMMENT ON COLUMN vehicle.vm_model_id IS
     'Identifier for vehicle_model';
 
 ALTER TABLE vehicle ADD CONSTRAINT vehicle_pk PRIMARY KEY (veh_vin);
