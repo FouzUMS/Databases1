@@ -130,4 +130,11 @@ COMMENT ON COLUMN trip.lang_iso_code IS
 
 COMMENT ON COLUMN trip.off_id IS
     'Identifier for an official';
+
+ALTER TABLE trip ADD CONSTRAINT trip_pk PRIMARY KEY (trip_id);
+ALTER TABLE trip ADD CONSTRAINT uq_trip_int_pickupdt UNIQUE (trip_int_pickupdt);
+ALTER TABLE trip ADD CONSTRAINT uq_trip_int_dropoffdt UNIQUE (trip_int_dropoffdt);
+ALTER TABLE trip ADD CONSTRAINT uq_veh_vin UNIQUE (veh_vin);
+ALTER TABLE trip ADD CONSTRAINT uq_driver_id UNIQUE (driver_id);
+
 -- Add all missing FK Constraints below here
