@@ -18,9 +18,9 @@
 
 -- OFFICIAL
 
--- DROP TABLE official CASCADE CONSTRAINTS;
--- DROP TABLE vehicle CASCADE CONSTRAINTS;
--- DROP TABLE trip CASCADE CONSTRAINTS;
+DROP TABLE official CASCADE CONSTRAINTS;
+DROP TABLE vehicle CASCADE CONSTRAINTS;
+DROP TABLE trip CASCADE CONSTRAINTS;
 
 CREATE TABLE official (
     off_id          NUMBER(4) NOT NULL,
@@ -131,11 +131,14 @@ COMMENT ON COLUMN trip.lang_iso_code IS
 COMMENT ON COLUMN trip.off_id IS
     'Identifier for an official';
 
+-- ALTER TABLE trip ADD CONSTRAINT trip_pk PRIMARY KEY (trip_id);
+-- ALTER TABLE trip ADD CONSTRAINT trip_int_pickupdt_uq UNIQUE (trip_int_pickupdt);
+-- ALTER TABLE trip ADD CONSTRAINT trip_int_dropoffdt_uq UNIQUE (trip_int_dropoffdt);
+-- ALTER TABLE trip ADD CONSTRAINT veh_vin_uq UNIQUE (veh_vin);
+-- ALTER TABLE trip ADD CONSTRAINT driver_id_uq UNIQUE (driver_id);
+
 ALTER TABLE trip ADD CONSTRAINT trip_pk PRIMARY KEY (trip_id);
-ALTER TABLE trip ADD CONSTRAINT uq_trip_int_pickupdt UNIQUE (trip_int_pickupdt);
-ALTER TABLE trip ADD CONSTRAINT uq_trip_int_dropoffdt UNIQUE (trip_int_dropoffdt);
-ALTER TABLE trip ADD CONSTRAINT uq_veh_vin UNIQUE (veh_vin);
-ALTER TABLE trip ADD CONSTRAINT uq_driver_id UNIQUE (driver_id);
+ALTER TABLE trip ADD CONSTRAINT trip_uq UNIQUE (trip_int_pickupdt, trip_int_dropoffdt, veh_vin, driver_id);
 
 -- Add all missing FK Constraints below here
 

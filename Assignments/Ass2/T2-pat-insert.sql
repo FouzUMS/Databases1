@@ -39,7 +39,7 @@ INSERT INTO official (
     'Chloe',
     'Adams',
     'GEO', 
-    9
+    null
 );
 
 INSERT INTO official (
@@ -137,7 +137,7 @@ INSERT INTO official (
     'Leila',
     'Silva',
     'GEO', 
-    null
+    2
 );
 
 INSERT INTO official (
@@ -169,7 +169,7 @@ INSERT INTO vehicle (
 ) VALUES (
     19781671156197253,
     'GETY715',
-    2006,
+    to_date(2006,'yyyy'),
     141010,
     8,
     8
@@ -185,7 +185,7 @@ INSERT INTO vehicle (
 ) VALUES (
     28672365318721865,
     'JRWB917',
-    2013,
+    to_date(2013,'yyyy'),
     63462,
     12,
     1
@@ -201,7 +201,7 @@ INSERT INTO vehicle (
 ) VALUES (
     36482739282080328,
     'GBRW036',
-    2020,
+    to_date(2020,'yyyy'),
     14282,
     45,
     3
@@ -217,7 +217,7 @@ INSERT INTO vehicle (
 ) VALUES (
     82738263826325651,
     'MUBP610',
-    2018,
+    to_date(2018,'yyyy'),
     20601,
     7,
     7
@@ -233,7 +233,7 @@ INSERT INTO vehicle (
 ) VALUES (
     29887265654151819,
     'JUNV851',
-    2019,
+    to_date(2019,'yyyy'),
     17082,
     14,
     6
@@ -249,7 +249,7 @@ INSERT INTO vehicle (
 ) VALUES (
     28947294463762929,
     'KUMV815',
-    2020,
+    to_date(2020,'yyyy'),
     19728,
     7,
     7
@@ -265,7 +265,7 @@ INSERT INTO vehicle (
 ) VALUES (
     28786826725265628,
     'LWBQ462',
-    2017,
+    to_date(2017,'yyyy'),
     36082,
     14,
     6
@@ -281,7 +281,7 @@ INSERT INTO vehicle (
 ) VALUES (
     86125279171080189,
     'HCEP646',
-    2016,
+    to_date(2016,'yyyy'),
     30167,
     12,
     1
@@ -297,7 +297,7 @@ INSERT INTO vehicle (
 ) VALUES (
     27492267998911716,
     'LPUB010',
-    2015,
+    to_date(2015,'yyyy'),
     26534,
     8,
     9
@@ -313,7 +313,7 @@ INSERT INTO vehicle (
 ) VALUES (
     99173626516397281,
     'THBL726',
-    2019,
+    to_date(2019,'yyyy'),
     17514,
     14,
     6
