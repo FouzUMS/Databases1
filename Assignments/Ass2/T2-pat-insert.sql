@@ -324,37 +324,6 @@ INSERT INTO vehicle (
 --INSERT INTO trip
 --------------------------------------
 
---has 4 dates. Will need:
---to_date('______ __:__:__', 'dd-Mon-yyyy hh24:mi:ss')
-
--- INSERT INTO trip (
---     trip_id,
---     trip_nopassengers,
---     trip_int_pickupdt,
---     trip_act_pickupdt,
---     trip_int_dropoffdt,
---     trip_act_dropoffdt,
---     veh_vin,
---     driver_id,
---     pickup_locn_id,
---     dropoff_locn_id,
---     lang_iso_code,
---     off_id
--- ) VALUES (
---     1,
---     6,
---     to_date('22-Jul-2024 09:30:00', 'dd-Mon-yyyy hh24:mi:ss'),
---     to_date('22-Jul-2024 09:30:00', 'dd-Mon-yyyy hh24:mi:ss'),
---     to_date('22-Jul-2024 13:15:00', 'dd-Mon-yyyy hh24:mi:ss'),
---     to_date('22-Jul-2024 13:15:00', 'dd-Mon-yyyy hh24:mi:ss'),
---     82738263826325651,
---     2002,
---     105,
---     110,
---     'ml',
---     5
--- );
-
 --1
 INSERT INTO trip (
     trip_id,
