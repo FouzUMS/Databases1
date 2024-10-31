@@ -138,3 +138,45 @@ ALTER TABLE trip ADD CONSTRAINT uq_veh_vin UNIQUE (veh_vin);
 ALTER TABLE trip ADD CONSTRAINT uq_driver_id UNIQUE (driver_id);
 
 -- Add all missing FK Constraints below here
+
+ALTER TABLE official
+    ADD CONSTRAINT cr_ioc_code_fk FOREIGN KEY ( cr_ioc_code )
+        REFERENCES country_region ( cr_ioc_code );
+
+ALTER TABLE official
+    ADD CONSTRAINT off_cdm_fk FOREIGN KEY ( off_cdm )
+        REFERENCES official ( off_id );
+
+
+
+
+ALTER TABLE vehicle
+    ADD CONSTRAINT vm_model_id_fk FOREIGN KEY ( vm_model_id )
+        REFERENCES vehicle_model ( vm_model_id );
+
+
+
+
+ALTER TABLE trip
+    ADD CONSTRAINT veh_vin_fk FOREIGN KEY ( veh_vin )
+        REFERENCES vehicle ( veh_vin );
+
+ALTER TABLE trip
+    ADD CONSTRAINT driver_id_fk FOREIGN KEY ( driver_id )
+        REFERENCES driver ( driver_id );
+
+ALTER TABLE trip
+    ADD CONSTRAINT pickup_locn_id_fk FOREIGN KEY ( pickup_locn_id )
+        REFERENCES location ( locn_id );
+
+ALTER TABLE trip
+    ADD CONSTRAINT dropoff_locn_id_fk FOREIGN KEY ( dropoff_locn_id )
+        REFERENCES location ( locn_id );
+
+ALTER TABLE trip
+    ADD CONSTRAINT lang_iso_code_fk FOREIGN KEY ( lang_iso_code )
+        REFERENCES language ( lang_iso_code );
+
+ALTER TABLE trip
+    ADD CONSTRAINT off_id_fk FOREIGN KEY ( off_id )
+        REFERENCES official ( off_id );
