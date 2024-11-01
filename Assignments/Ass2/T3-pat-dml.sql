@@ -73,22 +73,50 @@ INSERT INTO trip (
     5,
     to_date('30-Jul-2024 12:30:00', 'dd-Mon-yyyy hh24:mi:ss'),
     null,
-    to_date('29-Jul-2024 14:00:00', 'dd-Mon-yyyy hh24:mi:ss'),
+    to_date('30-Jul-2024 14:00:00', 'dd-Mon-yyyy hh24:mi:ss'),
     null,
     '1C4SDHCT9FC614231',
     (SELECT driver_id FROM driver WHERE driver_licence = '55052a543210'),
-    (SELECT * FROM LOCATION WHERE upper(locn_name) = upper('Olympic and Paralympic Village')),
-    (SELECT * FROM LOCATION WHERE upper(locn_name) = upper('Porte de la Chapelle Arena')),
+    (SELECT locn_id FROM LOCATION WHERE upper(locn_name) = upper('Olympic and Paralympic Village')),
+    (SELECT locn_id FROM LOCATION WHERE upper(locn_name) = upper('Porte de la Chapelle Arena')),
     (SELECT lang_iso_code FROM language WHERE upper(lang_name) = upper('English')),
-    6
+    ()
 );
--- The first trip was booked for 30 July 2024 at 12:30 PM from Olympic and Paralympic Village to
---  Porte de la Chapelle Arena, and it was scheduled to arrive 1 hour and 30 minutes later.
 
---  The second trip was booked for 30 July 2024 at 8:00 PM from Porte de la Chapelle Arena to
---  Olympic and Paralympic Village, and it was scheduled to arrive 1 hour and 15 minutes later.
-
-
+INSERT INTO trip (
+    trip_id,
+    trip_nopassengers,
+    trip_int_pickupdt,
+    trip_act_pickupdt,
+    trip_int_dropoffdt,
+    trip_act_dropoffdt,
+    veh_vin,
+    driver_id,
+    pickup_locn_id,
+    dropoff_locn_id,
+    lang_iso_code,
+    off_id
+) VALUES (
+    off_trip_seq.NEXTVAL,
+    5,
+    to_date('30-Jul-2024 20:00:00', 'dd-Mon-yyyy hh24:mi:ss'),
+    null,
+    to_date('30-Jul-2024 21:15:00', 'dd-Mon-yyyy hh24:mi:ss'),
+    null,
+    '1C4SDHCT9FC614231',
+    (SELECT driver_id FROM driver WHERE driver_licence = '55052a543210'),
+    (SELECT locn_id FROM LOCATION WHERE upper(locn_name) = upper('Porte de la Chapelle Arena')),
+    (SELECT locn_id FROM LOCATION WHERE upper(locn_name) = upper('Olympic and Paralympic Village')),
+    (SELECT lang_iso_code FROM language WHERE upper(lang_name) = upper('English')),
+    ()
+);
 
 /*(d)*/
-
+--() in part C
+-- test out below statements in ORDS
+UPDATE trip
+SET
+    trip_act_pickupdt = to_date('30-Jul-2024 20:00:00', 'dd-Mon-yyyy hh24:mi:ss')
+    trip_act_dropoffdt = 
+WHERE
+    trip_id = (SELECT trip_id WHERE trip_int_pickupdt = '' AND veh_vin = '1C4SDHCT9FC614231')
