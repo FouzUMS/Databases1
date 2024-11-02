@@ -113,7 +113,6 @@ INSERT INTO trip (
 COMMIT;
 
 /*(d)*/
--- T1 file with the drop statement
 
 UPDATE trip
 SET
