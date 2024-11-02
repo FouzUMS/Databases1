@@ -124,5 +124,11 @@ COMMIT;
 
 DELETE FROM trip
 WHERE
-    trip_id = (SELECT trip_id FROM trip WHERE trip_int_pickupdt = to_date('30-Jul-2024 20:00:00','dd-Mon-yyyy hh24:mi:ss') AND veh_vin = '1C4SDHCT9FC614231');
+    trip_id = (
+    SELECT trip_id FROM trip WHERE driver_id = (
+        SELECT driver_id from driver WHERE upper(driver_given) = upper('Claire') AND upper(driver_family) = upper('Robert')
+    )
+    AND
+        trip_int_pickupdt > to_date('30-Jul-2024 17:00:00', 'dd-Mon-yyyy hh24:mi:ss')
+    );
 COMMIT;
