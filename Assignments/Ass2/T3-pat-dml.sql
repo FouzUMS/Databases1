@@ -130,5 +130,7 @@ WHERE
     )
     AND
         trip_int_pickupdt > to_date('30-Jul-2024 17:00:00', 'dd-Mon-yyyy hh24:mi:ss')
+    AND
+        trip_act_pickupdt IS null
     );
 COMMIT;
