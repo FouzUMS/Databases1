@@ -1,8 +1,8 @@
 /*****PLEASE ENTER YOUR DETAILS BELOW*****/
 --T5-pat-select.sql
 
---Student ID:
---Student Name:
+--Student ID: Fouz Ul Mubeen
+--Student Name: 35278307
 
 
 /* Comments for your marker:
@@ -69,4 +69,38 @@ ORDER BY
 -- ENSURE that your query is formatted and has a semicolon
 -- (;) at the end of this answer
 
+-- SELECT 
+--     d.driver_id,
+--     driver_given 
+--     || ' ' 
+--     || driver_family AS FULLNAME
+-- FROM 
+--     DRIVER d
 
+-- AND trip_act_pickupdt >= to_date('2024-08-01', 'dd-mm-yyyy')
+-- AND trip_act_dropoffdt <= to_date('2024-08-07', 'dd-mm-yyyy')
+
+SELECT
+    DRIVER_ID,
+    DRIVER_GIVEN
+    || ' '
+    || DRIVER_FAMILY AS FULLNAME,
+    CASE
+        WHEN COUNT(TRIP_ID) = 0 THEN
+            'No Trips'
+        ELSE
+            TO_CHAR(SUM((TRIP_ACT_DROPOFFDT - TRIP_ACT_PICKUPDT) * 45.42),'$9999.99')
+    END AS TOTAL_PERIOD_PAYMENT
+FROM
+    DRIVER
+    NATURAL JOIN TRIP
+WHERE
+    TRIP_ACT_PICKUPDT >= TO_DATE('01-Aug-2024', 'dd-Mon-yyyy') AND 
+    TRIP_ACT_PICKUPDT <= TO_DATE('07-Aug-2024', 'dd-Mon-yyyy')
+GROUP BY
+    DRIVER_ID,
+    DRIVER_GIVEN
+    ||' '
+    ||DRIVER_FAMILY
+ORDER BY
+    DRIVER_ID;
